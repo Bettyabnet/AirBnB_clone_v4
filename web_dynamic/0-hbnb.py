@@ -7,8 +7,6 @@ from models.amenity import Amenity
 from models.place import Place
 from os import environ
 from flask import Flask, render_template
-from flasgger import Swagger
-from flasgger.utils import swag_from
 import uuid
 
 app = Flask(__name__)
@@ -42,13 +40,6 @@ def hbnb():
                            amenities=amenities,
                            places=places,
                            cache_id=uuid.uuid4())
-
-app.config['SWAGGER'] = {
-    'title': 'AirBnB clone Restful API',
-    'uiversion': 3
-}
-
-Swagger(app)
 
 
 if __name__ == "__main__":

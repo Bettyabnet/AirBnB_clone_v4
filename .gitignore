@@ -9,3 +9,6 @@ env
 
 # dont track __pychache__
 __pycache__/
+
+# dont track file storage
+file.json
